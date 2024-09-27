@@ -2,35 +2,30 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        int likes = 0;
+
+        private void IncrementLikes(object sender, EventArgs e)
         {
-            count++;
+            likes++;
+            LblLikeCounter.Text = $"Polubień: {likes}";
 
-            if (count == 1)
-                Polubienia.Text = $"Polubienia: {count} ";
-            else
-                Polubienia.Text = $"Polubienia {count} ";
-
-            SemanticScreenReader.Announce(Like.Text);
         }
-        private void OnDisCounterClicked(object sender, EventArgs e)
+        private void DecrementLikes(object sender, EventArgs e)
         {
-
-
-            if (count >= 1)
+            if (likes == 0)
             {
-                Polubienia.Text = $"Polubienia: {count} ";
-                count--;
+                return;
             }
+            likes--;
+            LblLikeCounter.Text = $"Polubień: {likes}";
 
-            SemanticScreenReader.Announce(Like.Text);
+
         }
     }
 

@@ -5,39 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
 
-    <VerticalStackLayout Padding="30,0" Spacing="25">
-        <Label
-            FontSize="28"
-            HorizontalOptions="Center"
-            SemanticProperties.HeadingLevel="Level1"
-            Text="Spacer po plantach" />
+	<VerticalStackLayout Padding="30,0" Spacing="25">
+		<Label
+                x:Name="LblLikeCounter"
+                Text="Polubień: 0"
+                HorizontalTextAlignment="End"
+            />
 
 
-        <Image
-            Aspect="AspectFit"
-            HeightRequest="185"
-            SemanticProperties.Description="dot net bot in a race car number eight"
-            Source="katedra.jpg" />
-
-        <Label
-            x:Name="Polubienia"
-            HorizontalOptions="End"
-            Text="Polubień: 0" />
-        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ex id metus rhoncus, a lacinia enim commodo. Aenean ullamcorper bibendum dui, ac ultrices sem dignissim vitae. Integer et mi tempor, vulputate odio ac, accumsan quam. Aliquam nec tellus ac nisl consequat laoreet ultrices sit amet turpis. Phasellus dapibus dui tortor, et maximus dolor ultrices ac. Vivamus lobortis magna vel dolor posuere, ut rhoncus velit cursus. Cras nec tellus non libero pellentesque hendrerit ac in enim. Phasellus ultrices tortor sed turpis rutrum," />
-
-        <Button
-            x:Name="Like"
-            Clicked="OnCounterClicked"
-            HorizontalOptions="Center"
-            Text="Polub" />
-        <Button
-            x:Name="DisLike"
-            Clicked="OnDisCounterClicked"
-            HorizontalOptions="Center"
-            Text="Polub" />
-
-
-    </VerticalStackLayout>
+	</VerticalStackLayout>
 
 
 </ContentPage>
